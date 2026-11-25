@@ -1,0 +1,222 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="NEXORA is a digital growth agency offering Meta Ads, SEO and social media marketing.">
+<title>NEXORA | Digital Growth Agency</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --purple:#7048e8;
+  --dark:#171624;
+  --grey:#777586;
+  --light:#f8f7fc;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',sans-serif;color:var(--dark)}
+a{text-decoration:none;color:inherit}
+.container{width:90%;max-width:1160px;margin:auto}
+
+header{height:80px;border-bottom:1px solid #eee;display:flex;align-items:center;background:#fff;position:sticky;top:0;z-index:10}
+nav{display:flex;justify-content:space-between;align-items:center}
+.logo{font-family:Manrope;font-size:28px;font-weight:800;letter-spacing:-1.5px}
+.logo span{color:var(--purple)}
+.links{display:flex;gap:30px;align-items:center}
+.links a{font-size:14px;font-weight:600}
+.links a:hover{color:var(--purple)}
+.btn{display:inline-block;background:var(--purple);color:white;padding:14px 23px;border-radius:7px;font-weight:700;font-size:14px}
+.btn:hover{background:#5633c9}
+.menu{display:none;border:0;background:none;font-size:25px}
+
+.hero{padding:120px 0;text-align:center;background:radial-gradient(ellipse at 80% 20%,#eee9ff,transparent 35%),#fff}
+.tag{color:var(--purple);font-size:12px;font-weight:800;letter-spacing:2px;text-transform:uppercase}
+h1{font-family:Manrope;font-size:clamp(44px,7vw,76px);line-height:1.12;letter-spacing:-3px;margin:24px 0}
+h1 span{color:var(--purple)}
+.hero p{max-width:650px;margin:0 auto 32px;color:var(--grey);font-size:18px;line-height:1.8}
+.actions{display:flex;justify-content:center;gap:14px;flex-wrap:wrap}
+.outline{border:1px solid #ddd;background:white;color:var(--dark)}
+section{padding:90px 0}
+.heading{text-align:center;max-width:650px;margin:0 auto 50px}
+.heading h2,.about h2,.contact h2{font-family:Manrope;font-size:clamp(30px,4vw,44px);line-height:1.2;letter-spacing:-1.5px;margin:15px 0}
+.heading p,.about p,.contact p{color:var(--grey);line-height:1.8}
+.services{background:var(--light)}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.card{background:white;border:1px solid #eee;border-radius:13px;padding:30px;transition:.2s}
+.card:hover{transform:translateY(-5px);box-shadow:0 12px 35px #21144a10}
+.icon{width:48px;height:48px;border-radius:10px;background:#f0ebff;color:var(--purple);display:grid;place-items:center;font-size:23px;margin-bottom:20px}
+.card h3{font-size:19px;margin-bottom:10px}
+.card p{font-size:14px;color:var(--grey);line-height:1.8}
+
+.about-grid,.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:65px;align-items:center}
+.about-panel{background:#19162b;color:white;padding:45px;border-radius:15px}
+.about-panel h3{font-family:Manrope;font-size:28px;margin-bottom:15px}
+.about-panel p{color:#c4c0d2}
+.points{margin-top:25px;display:grid;gap:15px;font-size:14px}
+.points span{color:#a88fff;margin-right:10px}
+
+.process{background:var(--light)}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:30px}
+.step{padding:25px 0}
+.step small{color:var(--purple);font-weight:800;letter-spacing:2px}
+.step h3{margin:15px 0}
+.step p{color:var(--grey);font-size:14px;line-height:1.8}
+
+.cta{background:#19162b;color:white;text-align:center;padding:65px 25px;border-radius:17px}
+.cta h2{font-family:Manrope;font-size:clamp(30px,4vw,43px);margin-bottom:15px}
+.cta p{color:#c4c0d2;margin-bottom:25px}
+
+.contact-box{background:var(--light);padding:35px;border-radius:14px}
+.contact-box p{margin:12px 0 22px}
+
+footer{border-top:1px solid #eee;padding:30px 0}
+.footer{display:flex;justify-content:space-between;align-items:center;gap:20px}
+footer p{font-size:13px;color:var(--grey)}
+
+@media(max-width:800px){
+ .links{display:none;position:absolute;top:79px;left:0;width:100%;padding:25px 5%;background:white;flex-direction:column;align-items:flex-start;border-bottom:1px solid #eee}
+ .links.active{display:flex}
+ .menu{display:block}
+ .nav-cta{display:none}
+ .grid{grid-template-columns:repeat(2,1fr)}
+ .about-grid,.contact-grid{grid-template-columns:1fr;gap:35px}
+}
+@media(max-width:550px){
+ .hero{padding:85px 0}
+ section{padding:70px 0}
+ .grid,.steps{grid-template-columns:1fr}
+ .footer{flex-direction:column;text-align:center}
+ h1{letter-spacing:-2px}
+}
+</style>
+</head>
+
+<body>
+<header>
+<nav class="container">
+<a href="#" class="logo">NEX<span>ORA.</span></a>
+<div class="links" id="links">
+<a href="#home">Home</a>
+<a href="#services">Services</a>
+<a href="#about">About</a>
+<a href="#process">Process</a>
+<a href="#contact">Contact</a>
+</div>
+<a class="btn nav-cta" href="#contact">Let's Talk ↗</a>
+<button class="menu" id="menu">☰</button>
+</nav>
+</header>
+
+<main>
+<section class="hero" id="home">
+<div class="container">
+<div class="tag">Digital Growth Agency</div>
+<h1>Grow Your Brand.<br><span>Go Beyond.</span></h1>
+<p>We help ambitious businesses grow through performance marketing, strategic SEO and creative social media solutions.</p>
+<div class="actions">
+<a href="#contact" class="btn">Let's Work Together ↗</a>
+<a href="#services" class="btn outline">Explore Services</a>
+</div>
+</div>
+</section>
+
+<section class="services" id="services">
+<div class="container">
+<div class="heading">
+<div class="tag">Our Expertise</div>
+<h2>Digital Solutions That Drive Growth.</h2>
+<p>Strategic marketing services to help your business grow online.</p>
+</div>
+<div class="grid">
+<div class="card"><div class="icon">↗</div><h3>Meta Ads</h3><p>Facebook and Instagram advertising strategies focused on audience targeting, leads and sales.</p></div>
+<div class="card"><div class="icon">⌕</div><h3>SEO</h3><p>Improve organic visibility through keyword research, on-page SEO and search strategies.</p></div>
+<div class="card"><div class="icon">◎</div><h3>Social Media Marketing</h3><p>Build a stronger social presence through content planning and creative management.</p></div>
+<div class="card"><div class="icon">✳</div><h3>Growth Strategy</h3><p>Marketing strategies aligned with your business goals and target audience.</p></div>
+<div class="card"><div class="icon">▤</div><h3>Creative Strategy</h3><p>Advertising concepts and creative direction designed to communicate your brand value.</p></div>
+<div class="card"><div class="icon">⌁</div><h3>Performance Analysis</h3><p>Track campaign performance and identify opportunities for continuous improvement.</p></div>
+</div>
+</div>
+</section>
+
+<section id="about">
+<div class="container about-grid">
+<div class="about">
+<div class="tag">About NEXORA</div>
+<h2>Growth Begins With The Right Strategy.</h2>
+<p>NEXORA is a digital growth agency helping businesses strengthen their online presence through thoughtful marketing and performance-driven solutions.</p>
+<p style="margin-top:15px">We combine creativity, data and strategy to help brands move forward in an evolving digital world.</p>
+<a href="#contact" class="btn" style="margin-top:25px">Connect With Us ↗</a>
+</div>
+<div class="about-panel">
+<h3>Beyond Digital. Towards Growth.</h3>
+<p>We believe in meaningful work, clear communication and continuous improvement.</p>
+<div class="points">
+<div><span>✦</span> Strategy before execution</div>
+<div><span>✦</span> Data-informed decisions</div>
+<div><span>✦</span> Transparent communication</div>
+<div><span>✦</span> Long-term growth mindset</div>
+</div>
+</div>
+</div>
+</section>
+
+<section class="process" id="process">
+<div class="container">
+<div class="heading">
+<div class="tag">Our Process</div>
+<h2>A Clear Process For Better Growth.</h2>
+<p>Every successful project begins with understanding your business.</p>
+</div>
+<div class="steps">
+<div class="step"><small>01 / DISCOVER</small><h3>Understand</h3><p>We understand your business, audience, challenges and goals.</p></div>
+<div class="step"><small>02 / STRATEGIZE</small><h3>Plan</h3><p>We develop a practical marketing strategy for your business.</p></div>
+<div class="step"><small>03 / OPTIMIZE</small><h3>Improve</h3><p>We analyze performance and identify opportunities to improve.</p></div>
+</div>
+</div>
+</section>
+
+<section>
+<div class="container">
+<div class="cta">
+<h2>Ready To Take Your Brand Further?</h2>
+<p>Let's discuss your business goals and explore what's possible.</p>
+<a href="#contact" class="btn">Start a Conversation ↗</a>
+</div>
+</div>
+</section>
+
+<section id="contact">
+<div class="container contact-grid">
+<div class="contact">
+<div class="tag">Get In Touch</div>
+<h2>Let's Talk About Your Next Move.</h2>
+<p>Have a project in mind? Tell us about your business and let's explore how we can work together.</p>
+</div>
+<div class="contact-box">
+<h3>Let's Work Together.</h3>
+<p>Reach out to discuss your digital marketing requirements.</p>
+<a class="btn" href="mailto:YOUR_EMAIL@example.com?subject=NEXORA%20Enquiry">Email NEXORA ↗</a>
+</div>
+</div>
+</section>
+</main>
+
+<footer>
+<div class="container footer">
+<a href="#" class="logo">NEX<span>ORA.</span></a>
+<p>© <span id="year"></span> NEXORA. All rights reserved.</p>
+<p>Digital Growth Agency</p>
+</div>
+</footer>
+
+<script>
+document.getElementById('menu').onclick=()=>document.getElementById('links').classList.toggle('active');
+document.querySelectorAll('.links a').forEach(a=>a.onclick=()=>document.getElementById('links').classList.remove('active'));
+document.getElementById('year').textContent=new Date().getFullYear();
+</script>
+</body>
+</html>
